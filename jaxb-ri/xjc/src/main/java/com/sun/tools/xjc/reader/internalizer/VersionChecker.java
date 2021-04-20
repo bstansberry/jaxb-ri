@@ -119,6 +119,6 @@ public class VersionChecker extends XMLFilterImpl {
         this.locator = locator;
     }
 
-    private static final Set<String> VERSIONS = new HashSet<String>(Arrays.asList("1.0","2.0","2.1"));
+    private static final Set<String> VERSIONS = new HashSet<String>(Arrays.asList("1.0","2.0","2.1","3.0"));
 
 }
