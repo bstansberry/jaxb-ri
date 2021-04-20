@@ -45,6 +45,14 @@
         <relaxng.version>2.3.2</relaxng.version>
         <upper.java.level>9</upper.java.level>
         <base.java.level>8</base.java.level>
+
+        <!-- ***************** -->
+        <!-- Repository Deployment URLs -->
+        <!-- ***************** -->
+        <jboss.releases.repo.id>jboss-releases-repository</jboss.releases.repo.id>
+        <jboss.releases.repo.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</jboss.releases.repo.url>
+        <jboss.snapshots.repo.id>jboss-snapshots-repository</jboss.snapshots.repo.id>
+        <jboss.snapshots.repo.url>https://repository.jboss.org/nexus/content/repositories/snapshots/</jboss.snapshots.repo.url>
     </properties>
 
     <dependencies>
@@ -370,4 +378,17 @@
         <!--</profile>-->
 
     </profiles>
+
+    <distributionManagement>
+      <repository>
+        <id>${jboss.releases.repo.id}</id>
+        <name>JBoss Releases Repository</name>
+        <url>${jboss.releases.repo.url}</url>
+      </repository>
+      <snapshotRepository>
+        <id>${jboss.snapshots.repo.id}</id>
+        <name>JBoss Snapshots Repository</name>
+        <url>${jboss.snapshots.repo.url}</url>
+      </snapshotRepository>
+    </distributionManagement>
 </project>
